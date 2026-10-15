@@ -1,0 +1,48 @@
+{
+  "name": "DsPlayer 综合插件市场",
+  "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
+  "logo": "icons/market.png",
+  "updatedAt": "2026-10-13",
+  "plugins": [
+    {
+      "id": "musick-api",
+      "name": "MusicK音乐",
+      "author": "JmwPower",
+      "desc": "本地音乐聚合服务端 v1.0.0（music_api-main：聚合酷我/酷狗/QQ/网易云/咪咕/汽水六源的榜单、歌单、搜索、歌词。",
+      "version": "1.0.0",
+      "type": "server",
+      "category": "app",
+      "url": "packages/music_api-main.zip",
+      "size": 2045291,
+      "md5": "1fc6ac7913a14593bb6b548269b1dbe4",
+      "changelog": "v1.0.0：5566 根路径直开音乐 Web 页；六源并发聚合搜索；随机歌单推荐。",
+      "tags": [
+        "服务",
+        "应用"
+      ],
+      "icon": "icons/musick.png",
+      "platforms": [
+        "android",
+        "win32"
+      ]
+    },
+    {
+      "id": "musick-source",
+      "name": "MusicK音乐配套源",
+      "author": "JmwPower",
+      "desc": "MusicK音乐后台配套源:六平台分类(排行榜/歌单)、六源并发聚合搜索、随机歌单推荐、播放带歌词、多线路自动换源。需先安装「MusicK音乐后台」。",
+      "version": "1.2.1",
+      "type": "source",
+      "category": "app",
+      "url": "packages/musick-source.zip",
+      "size": 4531,
+      "md5": "7b3b1e036c3ce0f98927427741849d4c",
+      "changelog": "v1.2.0:多播放线路自动换源，后端返回多个候选链接时前端以数组形式交付播放器，起播失败自动切换下一条。",
+      "tags": [
+        "本地源",
+        "应用"
+      ],
+      "icon": "icons/musick.png"
+    }
+  ]
+}
