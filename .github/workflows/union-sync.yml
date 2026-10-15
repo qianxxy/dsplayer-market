@@ -1,0 +1,66 @@
+name: union-sync
+
+# 综合仓（dsplayer-market）服务器侧合并：
+# 把各线上游 fork 的内容合并进本仓，只增不删；由 fork-sync 容器或人工 dispatch 触发。
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "触发原因（只进日志与提交信息）"
+        required: false
+        default: "手动触发"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: union-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: 检出综合仓
+        uses: actions/checkout@v4
+        with:
+          path: union
+          fetch-depth: 1
+
+      - name: 合并各线上游 fork
+        env:
+          UNION_DIR: ${{ github.workspace }}/union
+          SRC_ROOT: ${{ runner.temp }}/union-src
+          REASON: ${{ github.event.inputs.reason }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$SRC_ROOT"
+          python3 "$UNION_DIR/tools/union_sync.py" \
+            --union "$UNION_DIR" \
+            --src "$SRC_ROOT" \
+            --config "$UNION_DIR/tools/sources.json" \
+            --reason "${REASON:-union-sync}" | tee "${RUNNER_TEMP}/union_sync.out"
+          {
+            echo "### 综合仓合并结果"
+            echo '```'
+            cat "${RUNNER_TEMP}/union_sync.out"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 提交并推送
+        env:
+          REASON: ${{ github.event.inputs.reason }}
+        run: |
+          set -euo pipefail
+          cd union
+          git config user.name  fork-sync
+          git config user.email fork-sync@local
+          git add -A
+          if git diff --cached --quiet; then
+            echo "✅ 无变化，跳过提交"
+            exit 0
+          fi
+          git commit -q -m "sync: 合并上游插件（${REASON:-union-sync}）"
+          git push origin HEAD:main
+          echo "✅ 已推送到 main"
