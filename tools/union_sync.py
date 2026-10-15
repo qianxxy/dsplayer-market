@@ -9,7 +9,7 @@
 
 合并规则（与容器侧旧实现一致）：
   ① 文件只增不删：综合仓内已入库的路径永不删除
-  ② 同路径内容不同 → 覆盖；被覆盖的旧字节转存 rescue/<YYYYMMDD>/<原路径>
+  ② 同路径内容不同 → 覆盖；被覆盖的旧字节转存 rescue/<YYYYMMDD>/<线名>/<原路径>
   ③ 综合仓自家元数据（README.md / icons/market.png / check_market.py）
      固定取第一条线，后线同名文件转存（不覆盖招牌）
   ④ market.json 按 id 合并：同 id 取新 / 新 id 追加 / 线里删掉的 id 保留 / updatedAt 取最新
@@ -114,6 +114,7 @@ def main():
             continue
 
         nfile = 0
+        safe = label.replace("/", "_")
         for rel, full in walk_files(src):
             if rel == "market.json":
                 continue
@@ -124,7 +125,7 @@ def main():
                 added += 1
                 nfile += 1
             elif not same(full, dest):
-                arch = os.path.join(union, "rescue", today, rel)
+                arch = os.path.join(union, "rescue", today, safe, rel)
                 if idx != 0 and rel in PROTECT:
                     archn += archive(arch, full)
                 else:
