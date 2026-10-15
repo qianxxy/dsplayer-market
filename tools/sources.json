@@ -1,0 +1,8 @@
+{
+  "name": "DsPlayer 综合插件市场",
+  "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
+  "lines": [
+    { "repo": "yydfys/dsplayer-plugin", "branch": "main", "label": "dsplayer-plugin" },
+    { "repo": "yydfys/dsplayer-plugin-jmw", "branch": "main", "label": "dsplayer-plugin-jmw" }
+  ]
+}
