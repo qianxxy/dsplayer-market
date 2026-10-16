@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-16T19:00:00Z",
+  "updatedAt": "2026-10-16T14:31:56Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -828,6 +828,194 @@
         "android"
       ],
       "changelog": "首录 dsplayer 0.9.10（arm64-v8a / pkg com.dsplayer.ds_player）。走 GitHub Release 分发（tag dsplayer-0.9.10）。"
+    },
+    {
+      "id": "juku-lite",
+      "name": "短剧库精简后台",
+      "author": "juku",
+      "desc": "短剧库后端服务（juku-lite）。",
+      "version": "1.4.51",
+      "type": "import",
+      "category": "app",
+      "size": 6340850,
+      "url": "packages/duoju-lite.zip",
+      "icon": "icons/juku-lite.png",
+      "tags": [
+        "服务",
+        "应用"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "md5": "14ef4a63df37e4d374be17477d81ed3b",
+      "changelog": "导入型二进制后台，默认监听 127.0.0.1:8998（healthCheck 端口 8991）。"
+    },
+    {
+      "id": "duoju-manhua",
+      "name": "多聚漫画后台",
+      "author": "duoju",
+      "desc": "多聚漫画聚合源后端服务。",
+      "version": "2.4.3",
+      "type": "import",
+      "category": "app",
+      "size": 3248879,
+      "url": "packages/duoju-manhua.zip",
+      "icon": "icons/duoju-manhua.png",
+      "tags": [
+        "服务",
+        "应用"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "md5": "554ac40fbe8943be41680af39fac5805",
+      "changelog": "默认端口改为 8992（params 与 healthCheck 一致）。"
+    },
+    {
+      "id": "duoju-ting",
+      "name": "多聚听书后台",
+      "author": "duoju",
+      "desc": "多聚听书后端服务。",
+      "version": "1.9.2",
+      "type": "import",
+      "category": "app",
+      "size": 3347221,
+      "url": "packages/duoju-ting.zip",
+      "icon": "icons/duoju-ting.png",
+      "tags": [
+        "服务",
+        "应用"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "md5": "86536e101f535fa231d4a301bc35a33c",
+      "changelog": "默认监听 127.0.0.1:8999。"
+    },
+    {
+      "id": "guo-server",
+      "name": "真果·鉴",
+      "author": "DsPlayer",
+      "desc": "真果·鉴服务化：把真果·鉴 Go 核心包成本机 HTTP 服务，20 个果子（黄果系 8 + 短剧系 12）浏览/分类/搜索/详情/取流。Go 纯静态单文件（arm64），无需额外运行环境。",
+      "version": "0.1.7",
+      "type": "import",
+      "category": "app",
+      "size": 5798602,
+      "url": "packages/guo-server-plugin-0.1.7.zip",
+      "icon": "icons/guo-server.png",
+      "tags": [
+        "服务",
+        "应用"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "md5": "74f16e7f4bdfa51bfaad2a8a504950bf",
+      "changelog": "端口改为 8994（params 与 healthCheck 同步 8994）。"
+    },
+    {
+      "id": "juku-sanfang",
+      "name": "剧库",
+      "author": "juku",
+      "desc": "剧库后端服务（juku-sanfang）。",
+      "version": "1.4.55",
+      "type": "import",
+      "category": "app",
+      "size": 6335850,
+      "url": "packages/juku.zip",
+      "icon": "icons/juku-sanfang.png",
+      "tags": [
+        "服务",
+        "应用"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "md5": "9e9c9062eca72528b4c2c062410b829a",
+      "changelog": "默认监听 0.0.0.0:8990。"
+    },
+    {
+      "id": "lanmei-lite",
+      "name": "蓝莓短剧后台",
+      "author": "lanmei",
+      "desc": "蓝莓短剧后端服务：内置网页端 /web/，可接 CatVod 数据源。",
+      "version": "1.0.13",
+      "type": "import",
+      "category": "app",
+      "size": 3226710,
+      "url": "packages/lanmei-lite.zip",
+      "icon": "icons/lanmei-lite.png",
+      "tags": [
+        "服务",
+        "应用"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "md5": "e35549eeb966be1123c80ca1f9e219ce",
+      "changelog": "端口改为 8997（params 与 healthCheck 同步 8997）。"
+    },
+    {
+      "id": "t4server",
+      "name": "t4server",
+      "author": "DsPlayer",
+      "desc": "TVBox type:4 源执行服务（内置 Python rootfs，JS 侧源可搜可播）。",
+      "version": "0.4.11",
+      "type": "import",
+      "category": "app",
+      "size": 108813660,
+      "url": "packages/t4server-0.4.11.zip",
+      "icon": "icons/t4server.png",
+      "tags": [
+        "服务",
+        "应用"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "md5": "d600a519b8440f8a447a0c310a4b590e",
+      "changelog": "端口 12333（healthCheck /health）。导入型二进制，首次启动解压内置 rootfs。"
+    },
+    {
+      "id": "termux",
+      "name": "Termux 终端",
+      "author": "termux",
+      "desc": "Termux 终端环境 —— 基于 proot + ttyd 的 Web 终端，可执行 apt/pkg 等命令。启动后访问 http://127.0.0.1:7681。",
+      "version": "1.0.0",
+      "type": "import",
+      "category": "app",
+      "size": 22594866,
+      "url": "packages/termux-1.0.0.zip",
+      "icon": "icons/termux.png",
+      "tags": [
+        "服务",
+        "应用"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "md5": "d982e2100b18f017992036ca4253d911",
+      "changelog": "端口 7681（tcp healthCheck）。"
+    },
+    {
+      "id": "tvbox-t4-api",
+      "name": "T4 资源包（tvbox-t4-api）",
+      "author": "yydf",
+      "desc": "t4server 的 Python 资源包 —— 只下载不运行。整包释放到 sdcard/dsplayer/tvbox-t4-api/，由 t4server 启动器（127.0.0.1:12333）读取执行。",
+      "version": "2026.10.16",
+      "type": "source",
+      "category": "env",
+      "size": 5016483,
+      "url": "packages/tvbox-t4-api.zip",
+      "icon": "icons/tvbox-t4-api.png",
+      "tags": [
+        "资源包"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "md5": "4bf09f7053c606533f4f4fbdfb4e8109",
+      "changelog": "资源包首版：包根 source.json 声明 {\"target\":\"dsplayer\"}，包内顶层目录 tvbox-t4-api/ 直接落位 sdcard/dsplayer/tvbox-t4-api/（323 条目，含 core/、sources/js 295 源、tvbox_bridge.py）。"
     }
   ]
 }
