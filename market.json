@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-16T08:50:44Z",
+  "updatedAt": "2026-10-16T12:30:00Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -504,13 +504,13 @@
       "name": "演示源包",
       "author": "hjdhnx",
       "desc": "本地源码集合包（应用类）：整包按 DsPlayer 目录树解压——源文件落 sdcard/dsplayer/spider/。含 dr2/dr3/hipy/js 四类引擎源、html 四形态 Web 源（bilibili 完整版 / Web源演示教学 / 歪比巴卜页面增强器 booster——wbbb1.web.json+wbbb1.js 成对分发 / fm 桥自验探针——fm-selftest.html 与 GM 包装层探针 gm-probe.web.json+gm-probe.js 成对）共 21 个文件。",
-      "version": "1.2.6",
+      "version": "1.2.7",
       "type": "source",
       "category": "app",
-      "url": "packages/demo-sources-1.2.6.zip",
-      "size": 1183057,
-      "md5": "42fa2526842487554b766e40378bed1a",
-      "changelog": "1.2.6：新增 fm 桥自验探针——fm-selftest.html（打开自动跑 28 项 fm/ds API 自检表，结果打 console/logcat；group B 手点导航/播放类）+ gm-probe.web.json/.js（booster 语境 GM 包装层 8 项探针，与自验页同页合一）。配套本体 v0.9.9+ 的 fm 全量兼容（webhtv WebHome 对标：fm.vod/stat/ctrl/device/site/config/history/pan 降级/GM 包装层）。GM 探针源 api 为 Android 绝对路径 /storage/emulated/0/…（桌面端可按需手改）。",
+      "url": "packages/demo-sources-1.2.7.zip",
+      "size": 1183436,
+      "md5": "d1fdcbc1f520ce6de40ecf89699c94e7",
+      "changelog": "1.2.7：央视频d3 代理播放提速——TS 段 base64 编码改走 qjs_ultra C 层 Uint8Array.toBase64（三级回退 toBase64→Buffer→纯 JS，逐字符一致），每段 370-520ms → 2-10ms，起播约省 1-2s（续播段数越多省得越多）；作为「源内重活先查宿主 C 能力」典型案例。1.2.6：新增 fm 桥自验探针——fm-selftest.html（打开自动跑 28 项 fm/ds API 自检表，结果打 console/logcat；group B 手点导航/播放类）+ gm-probe.web.json/.js（booster 语境 GM 包装层 8 项探针，与自验页同页合一）。配套本体 v0.9.9+ 的 fm 全量兼容（webhtv WebHome 对标：fm.vod/stat/ctrl/device/site/config/history/pan 降级/GM 包装层）。GM 探针源 api 为 Android 绝对路径 /storage/emulated/0/…（桌面端可按需手改）。",
       "tags": [
         "本地源",
         "应用"
