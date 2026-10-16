@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-16T08:20:00Z",
+  "updatedAt": "2026-10-16T08:50:44Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -803,6 +803,31 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "dsplayer",
+      "name": "DsPlayer 本体",
+      "author": "DsPlayer",
+      "desc": "影视聚合壳本体（Android）。插件式架构：播放器内核、爬虫引擎、源全部以插件形态安装。本条目永远只指向最新版（Android 禁止降级覆盖安装，低版本须先卸载再装）；历史版本全部保留在 GitHub Releases 与 NAS 共用目录，可自行下载后手动安装。",
+      "version": "0.9.10",
+      "type": "apk",
+      "category": "app",
+      "pkg": "com.dsplayer.ds_player",
+      "size": 18686217,
+      "url": "https://github.com/yydfys/dsplayer-market/releases/download/dsplayer-0.9.10/DsPlayer-0.9.10-arm64.apk",
+      "icon": "icons/dsplayer.png",
+      "tags": [
+        "本体",
+        "应用"
+      ],
+      "md5": "522b2cf65e594e7b2c6003b11a32b8c1",
+      "abis": [
+        "arm64-v8a"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "changelog": "首录 dsplayer 0.9.10（arm64-v8a / pkg com.dsplayer.ds_player）。走 GitHub Release 分发（tag dsplayer-0.9.10）。"
     }
   ]
 }
