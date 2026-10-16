@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-16T15:11:19Z",
+  "updatedAt": "2026-10-16T23:02:12Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -198,18 +198,18 @@
       "id": "python",
       "name": "Python 运行时",
       "author": "hjdhnx",
-      "desc": "Python 3.12 运行时（musl 链接，Android arm64 独立进程）：插件卡「依赖管理」支持 pip 安装/卸载，musllinux wheel 的 C 扩展包（lxml/numpy 等）可直接安装免编译；爬虫一键装九件套。「服务」页添加 Python T4 服务（Flask 或任意 pip 可装框架，fastapi 依赖 Rust 扩展无 musl wheel 不可用）。内置 DNS shim、CA 证书与可写目录适配。示例源 examples/t4_demo.py。与「Python 爬虫引擎」APK 插件（id: py）互补：本包跑独立进程 HTTP 服务，APK 包做进程内爬虫源。",
-      "version": "1.0.2",
+      "desc": "Python 3.12 运行时（musl 链接，Android arm64 独立进程）：插件卡「依赖管理」支持 pip 安装/卸载，musllinux wheel 的 C 扩展包（lxml/numpy 等）可直接安装免编译；爬虫一键装九件套。「服务」页添加 Python T4 服务（Flask 或任意 pip 可装框架，fastapi 依赖 Rust 扩展无 musl wheel 不可用）。内置 DNS shim（毫秒级直连解析）、CA 证书与可写目录适配。示例源 examples/t4_demo.py。与「Python 爬虫引擎」APK 插件（id: py）互补：本包跑独立进程 HTTP 服务，APK 包做进程内爬虫源。",
+      "version": "1.0.3",
       "type": "import",
-      "size": 23377205,
-      "url": "packages/python-1.0.2.zip",
+      "size": 23385608,
+      "url": "packages/python-1.0.3.zip",
       "icon": "icons/python.png",
       "tags": [
         "运行时",
         "服务"
       ],
-      "md5": "987031e828f3e812403cc0c6f9df78e4",
-      "changelog": "v1.0.2：鸿蒙 4.2 兼容两连修——①TMPDIR/HOME 显式注入到插件内可写目录（部分 ROM app 进程无 HOME 且无 /tmp，pip 下载/解包报 No usable temporary directory）；②musl 平台探测 spawn 失败防御（部分 ROM app 域 fork/exec 受限报 /lib/ld-musl-aarch64.so.1 ENOENT 整包装包失败，现失败一律回落伪造标签照常装 musllinux wheel）。v1.0.1：pip 平台标签修复（musllinux wheel 识别）。v1.0.0 首发。已装 1.0.0/1.0.1 的用户从市场更新后重试「爬虫一键装」即可。",
+      "md5": "40088e25287afff72f59d08e14ff0044",
+      "changelog": "v1.0.3：DNS shim 提速根修——原实现每次域名解析先走 musl 原版（无 /etc/resolv.conf 时按默认 nameserver 127.0.0.1 黑洞死等 5 秒超时）才回落自查询，独立服务（央视直播代理类等）播放链每步白等 5 秒导致「列表正常、播放全败」；现 IP/hosts 原版直通、真域名直接自查询（毫秒级 + 5 分钟缓存），原版仅作全败兜底。v1.0.2：鸿蒙 4.2 兼容两连修——①TMPDIR/HOME 显式注入到插件内可写目录（部分 ROM app 进程无 HOME 且无 /tmp，pip 下载/解包报 No usable temporary directory）；②musl 平台探测 spawn 失败防御（部分 ROM app 域 fork/exec 受限报 /lib/ld-musl-aarch64.so.1 ENOENT 整包装包失败，现失败一律回落伪造标签照常装 musllinux wheel）。v1.0.1：pip 平台标签修复（musllinux wheel 识别）。v1.0.0 首发。已装 1.0.0/1.0.1 的用户从市场更新后重试「爬虫一键装」即可。",
       "platforms": [
         "android"
       ],
