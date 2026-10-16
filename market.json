@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-16T14:55:28Z",
+  "updatedAt": "2026-10-16T15:11:19Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -808,26 +808,72 @@
       "id": "dsplayer",
       "name": "DsPlayer 本体",
       "author": "DsPlayer",
-      "desc": "影视聚合壳本体（Android）。插件式架构：播放器内核、爬虫引擎、源全部以插件形态安装。本条目永远只指向最新版（Android 禁止降级覆盖安装，低版本须先卸载再装）；历史版本全部保留在 GitHub Releases 与 NAS 共用目录，可自行下载后手动安装。",
-      "version": "0.9.10",
+      "desc": "影视聚合壳本体（Android）。插件式架构：播放器内核、爬虫引擎、源全部以插件形态安装。本条目永远只指向最新版（Android 禁止降级覆盖安装，低版本须先卸载再装）；历史版本保留在 NAS 共用目录，可自行下载后手动安装。",
+      "version": "0.9.11",
       "type": "apk",
       "category": "app",
       "pkg": "com.dsplayer.ds_player",
-      "size": 18686217,
-      "url": "https://github.com/yydfys/dsplayer-market/releases/download/dsplayer-0.9.10/DsPlayer-0.9.10-arm64.apk",
+      "size": 18818548,
+      "url": "apk/DsPlayer-0.9.11-arm64.apk",
       "icon": "icons/dsplayer.png",
       "tags": [
         "本体",
         "应用"
       ],
-      "md5": "522b2cf65e594e7b2c6003b11a32b8c1",
+      "md5": "a294db8cda606fd65f8f3a9eb48349c5",
       "abis": [
         "arm64-v8a"
       ],
       "platforms": [
         "android"
       ],
-      "changelog": "首录 dsplayer 0.9.10（arm64-v8a / pkg com.dsplayer.ds_player）。走 GitHub Release 分发（tag dsplayer-0.9.10）。"
+      "changelog": "0.9.11（arm64-v8a / 64 位设备）。分发改走仓库 apk/ 目录（原 Release 资产方式停用）。"
+    },
+    {
+      "id": "dsplayer-arm32",
+      "name": "DsPlayer 本体（32 位）",
+      "author": "DsPlayer",
+      "desc": "影视聚合壳本体（Android / armeabi-v7a 32 位）。只在 32 位 Android 设备（老手机、32 位电视盒子）上出现；64 位设备请装标准版（id dsplayer）。",
+      "version": "0.9.11",
+      "type": "apk",
+      "category": "app",
+      "pkg": "com.dsplayer.ds_player",
+      "size": 18694124,
+      "url": "apk/DsPlayer-0.9.11-arm32.apk",
+      "icon": "icons/dsplayer.png",
+      "tags": [
+        "本体",
+        "应用"
+      ],
+      "md5": "41f97231faf1bb791c0c30a848992ee8",
+      "abis": [
+        "armeabi-v7a"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "changelog": "首录 0.9.11（armeabi-v7a / 32 位设备）。"
+    },
+    {
+      "id": "dsplayer-win",
+      "name": "DsPlayer 本体（Windows）",
+      "author": "DsPlayer",
+      "desc": "影视聚合壳本体（Windows 64 位）。下载 7z 压缩包，解压即用。",
+      "version": "0.9.11",
+      "type": "apk",
+      "category": "app",
+      "size": 26600635,
+      "url": "apk/DsPlayer-0.9.11-windows-x64.7z",
+      "icon": "icons/dsplayer.png",
+      "tags": [
+        "本体",
+        "应用"
+      ],
+      "md5": "f88fd3c3e43ee5a29d6c1ae99c3f398f",
+      "platforms": [
+        "win32"
+      ],
+      "changelog": "首录 0.9.11（windows-x64）。"
     },
     {
       "id": "juku-lite",
