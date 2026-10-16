@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-16T14:31:56Z",
+  "updatedAt": "2026-10-16T14:47:18Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -964,7 +964,7 @@
       "type": "import",
       "category": "app",
       "size": 108813660,
-      "url": "packages/t4server-0.4.11.zip",
+      "url": "https://github.com/yydfys/dsplayer-market/releases/download/t4server-0.4.11/t4server-0.4.11.zip",
       "icon": "icons/t4server.png",
       "tags": [
         "服务",
@@ -974,7 +974,7 @@
         "android"
       ],
       "md5": "d600a519b8440f8a447a0c310a4b590e",
-      "changelog": "端口 12333（healthCheck /health）。导入型二进制，首次启动解压内置 rootfs。"
+      "changelog": "端口 12333（healthCheck /health）。导入型二进制，首次启动解压内置 rootfs。包体 103.8 MiB 超仓库单文件上限，走 GitHub Release 资产分发（tag t4server-0.4.11）。"
     },
     {
       "id": "termux",
