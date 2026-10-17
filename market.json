@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-17T23:32:08Z",
+  "updatedAt": "2026-10-17T23:45:49Z",
   "plugins": [
     {
       "id": "musick-api",
