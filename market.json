@@ -1093,7 +1093,7 @@
       "author": "yydfys",
       "desc": "DsPlayer 源安全检测用的 risk_rules 优化版（rules 124 / heuristics 19 / counters 6，version 2026-10-17.3），与壳子内置 assets/security/risk_rules.json 同 schema，100% 可解析。点「导入」后整包自动解压落盘到 /storage/emulated/0/dsplayer/risk_rules.optimized.json（同目录附 risk_rules_README.txt 使用说明）。不自动生效、不覆盖壳子内置规则：到壳内「风险规则 / 源安全检测」的导入入口手动选择该文件即可；不想用就不导入，或删掉这两个文件即回退。",
       "version": "2026.10.17.3",
-      "type": "import",
+      "type": "source",
       "size": 10956,
       "url": "packages/risk_rules.zip",
       "icon": "icons/risk-rules.png",
