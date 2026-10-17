@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-17T16:34:58Z",
+  "updatedAt": "2026-10-17T23:32:08Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -1086,6 +1086,28 @@
       "md5": "0a6ff0bc0effa5c36c649900489aff23",
       "changelog": "导入型二进制（arm64，包内 xjpan-android），启动参数 -port 5690 -bind 127.0.0.1，healthCheck http://127.0.0.1:5690/。",
       "updatedAt": "2026-10-17T09:35:02Z"
+    },
+    {
+      "id": "risk-rules",
+      "name": "源安全检测规则包（优化版 2026-10-17.3）",
+      "author": "yydfys",
+      "desc": "DsPlayer 源安全检测用的 risk_rules 优化版（rules 124 / heuristics 19 / counters 6，version 2026-10-17.3），与壳子内置 assets/security/risk_rules.json 同 schema，100% 可解析。点「导入」后整包自动解压落盘到 /storage/emulated/0/dsplayer/risk_rules.optimized.json（同目录附 risk_rules_README.txt 使用说明）。不自动生效、不覆盖壳子内置规则：到壳内「风险规则 / 源安全检测」的导入入口手动选择该文件即可；不想用就不导入，或删掉这两个文件即回退。",
+      "version": "2026.10.17.3",
+      "type": "import",
+      "size": 11077,
+      "url": "packages/risk_rules.zip",
+      "icon": "icons/risk-rules.png",
+      "tags": [
+        "安全",
+        "规则",
+        "工具"
+      ],
+      "changelog": "2026.10.17.3 首版上架：①修漏检——fs.*Sync 系列全漏检、PHP-SRC-03 非法 severity、HTML 标记 / PHP 函数名 / scheme 的大小写绕过；②新增 23 条覆盖（unserialize 反序列化、反引号执行、动态包含、vm 沙箱逃逸、child_process、WebSocket 外传、顶层导航劫持等）；③按壳子 Dart RegExp（V8 Irregexp）引擎适配，15 条 JS 专有写法的回退改为 (?<![\\w.$]) 形式；④包内附中文使用说明，纯手动导入、不改内置规则。",
+      "md5": "cb7394b8825e222af2b2834ee6080e42",
+      "platforms": [
+        "android"
+      ],
+      "category": "env"
     }
   ]
 }
