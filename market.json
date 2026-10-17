@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-17T05:33:03Z",
+  "updatedAt": "2026-10-17T05:42:00Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -453,7 +453,9 @@
       "platforms": [
         "android",
         "win32"
-      ]
+      ],
+      "delisted": true,
+      "delistedNote": "直播源很卡，用户体验不好；推荐使用沙盒自建 ysp 直播服务（实验室 → Linux 沙盒）。下架标记仅隐藏市场展示，条目与安装包保留在本仓库，可随时恢复上架。"
     },
     {
       "id": "lx-sync",

@@ -38,7 +38,7 @@ DsPlayer 插件官方市场仓库：`market.json` 为市场索引（在线安装
 | 条目 | id | 版本 | type | 包 |
 |---|---|---|---|---|
 | 插件整合包 | `bundle` | 1.1.0 | **apk**（系统安装；platforms=android） | `packages/bundle-1.1.0.apk` |
-| IPTV 直播源（CCSH 采集） | `iptv-ccsh` | 1.1.0 | **live**（直播源包；platforms=android+win32） | `packages/iptv-ccsh-1.1.0.json` |
+| ~~IPTV 直播源（CCSH 采集）~~ | `iptv-ccsh` | 1.1.0 | **live**（直播源包；platforms=android+win32）**⚠️ 已下架**（`delisted: true`——源站卡顿体验不佳，推荐沙盒自建 ysp 直播服务；条目与包保留在仓库，去标记即可恢复上架） | `packages/iptv-ccsh-1.1.0.json` |
 | 洛雪同步 | `lx-sync` | 2.1.2 | **server**（服务包；platforms=android+win32） | `packages/lx-sync-2.1.2.zip` |
 | 弹幕 API 服务 | `danmu-api` | 1.0.0 | **server**（服务包；platforms=android+win32） | `packages/danmu-1.0.0.zip` |
 | EPG 节目单服务 | `epg-tool` | 1.0.0 | **server**（服务包；runtime=php，需先装 php 运行时插件；platforms=android） | `packages/epg-tool-1.0.0.zip` |
@@ -130,6 +130,7 @@ GitHub 直连不畅时，任选其一（DsPlayer 内「管理市场 → GitHub �
 | `minApp` | | 可选；要求的最低 DsPlayer 版本，不满足时安装按钮置灰 |
 | `pkg` | | 可选；**type=apk 专属**——应用包名。声明后客户端走通用包探测判定已安装（第三方插件零壳子改动接入的关键：不在 DsPlayer 内置插件注册表的 apk 条目必须声明，否则市场 UI 恒判「未安装」） |
 | `abis` | | 可选；二进制形态条目的 CPU 架构声明（词表 `arm64-v8a`/`armeabi-v7a`/`x86_64`/`x86`，多值允许）。**缺省（未声明）= `["arm64-v8a"]`**（历史存量语义）；显式 `[]` = 不限（纯资源形态）。客户端按宿主进程 ABI 判定：不匹配条目默认隐藏 + 安装拦截（MARKET-ABI-ADAPT-DESIGN） |
+| `delisted` / `delistedNote` | | 可选；**下架标记**（2026-10-17）：`delisted: true` 表示条目已下架——**条目与包必须保留在仓库不删**（已装用户的本地记录/徽标匹配不受影响，去标记即可恢复上架）；客户端市场**列表/统计/更新检查一律排除**。`delistedNote` = 下架备注（理由/替代建议，仅记录，条目不在市场 UI 展示） |
 
 ## 发布约定（2026-09-20 起执行）
 
