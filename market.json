@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-17T06:38:32Z",
+  "updatedAt": "2026-10-17T09:35:02Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -1070,10 +1070,10 @@
       "name": "多聚网盘",
       "author": "duoju",
       "desc": "多聚网盘服务：支持夸克网盘、UC 网盘、百度网盘的登录与分享播放。",
-      "version": "1.4.8",
+      "version": "1.5.0",
       "type": "import",
       "category": "app",
-      "size": 9839945,
+      "size": 18360367,
       "url": "packages/xjpan.zip",
       "icon": "icons/duojupan.png",
       "tags": [
@@ -1083,8 +1083,9 @@
       "platforms": [
         "android"
       ],
-      "md5": "8109e65637423473b32fe19d73fa706f",
-      "changelog": "导入型二进制（arm64，包内 xjpan-android），启动参数 -port 5690 -bind 127.0.0.1，healthCheck http://127.0.0.1:5690/。"
+      "md5": "0a6ff0bc0effa5c36c649900489aff23",
+      "changelog": "导入型二进制（arm64，包内 xjpan-android），启动参数 -port 5690 -bind 127.0.0.1，healthCheck http://127.0.0.1:5690/。",
+      "updatedAt": "2026-10-17T09:35:02Z"
     }
   ]
 }
