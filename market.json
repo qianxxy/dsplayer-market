@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-17T23:45:49Z",
+  "updatedAt": "2026-10-18T00:59:04Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -815,21 +815,21 @@
       "type": "apk",
       "category": "app",
       "pkg": "com.dsplayer.ds_player",
-      "size": 18790802,
-      "url": "apk/DsPlayer-0.9.13-arm64.apk",
+      "size": 18799718,
+      "url": "apk/DsPlayer-0.9.13B-arm64.apk",
       "icon": "icons/dsplayer.png",
       "tags": [
         "本体",
         "应用"
       ],
-      "md5": "92b62549fd42b47def27b429e7e8b768",
+      "md5": "68619e44f2759272bee7a8174b7df418",
       "abis": [
         "arm64-v8a"
       ],
       "platforms": [
         "android"
       ],
-      "changelog": "自动上架：DsPlayer 本体 0.9.13（2026-10-18 00:34）。"
+      "changelog": "自动上架：DsPlayer 本体 0.9.13（2026-10-18 08:59）。"
     },
     {
       "id": "dsplayer-arm32",
