@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-18T12:20:22Z",
+  "updatedAt": "2026-10-18T20:22:28+08:00",
   "plugins": [
     {
       "id": "musick-api",
@@ -42,7 +42,11 @@
         "本地源",
         "应用"
       ],
-      "icon": "icons/musick.png"
+      "icon": "icons/musick.png",
+      "platforms": [
+        "android",
+        "win32"
+      ]
     },
     {
       "id": "mediaProxy",
@@ -921,24 +925,24 @@
     },
     {
       "id": "duoju-ting",
-      "name": "多聚听书后台",
-      "author": "duoju",
-      "desc": "多聚听书后端服务。",
-      "version": "1.9.2",
+      "name": "多聚听书",
+      "author": "JmwPower",
+      "desc": "多聚听书后端服务",
+      "version": "1.9.3",
       "type": "import",
-      "category": "app",
-      "size": 3347221,
+      "size": 3352353,
       "url": "packages/duoju-ting.zip",
-      "icon": "icons/duoju-ting.png",
+      "icon": "icons/duojuting.png",
       "tags": [
-        "服务",
-        "应用"
+        "网络",
+        "服务"
       ],
+      "changelog": "v1.9.3：后台续播——注册 MediaSession 保活防杀进程，退后台被挂起自动续播。",
+      "md5": "ea9d43e0d26f41060ca0edcb9545fbec",
+      "category": "env",
       "platforms": [
         "android"
-      ],
-      "md5": "86536e101f535fa231d4a301bc35a33c",
-      "changelog": "默认监听 127.0.0.1:8999。"
+      ]
     },
     {
       "id": "guo-server",
@@ -984,24 +988,24 @@
     },
     {
       "id": "lanmei-lite",
-      "name": "蓝莓短剧后台",
-      "author": "lanmei",
-      "desc": "蓝莓短剧后端服务：内置网页端 /web/，可接 CatVod 数据源。",
-      "version": "1.0.13",
+      "name": "蓝莓短剧",
+      "author": "JmwPower",
+      "desc": "蓝莓短剧站点适配插件,需口令",
+      "version": "1.0.15",
       "type": "import",
-      "category": "app",
-      "size": 3226710,
-      "url": "packages/lanmei-lite.zip",
-      "icon": "icons/lanmei-lite.png",
+      "size": 3382568,
+      "url": "packages/lanmei-lite-1.0.15.zip",
+      "icon": "icons/lanmei.png",
       "tags": [
-        "服务",
-        "应用"
+        "网络",
+        "服务"
       ],
+      "changelog": "v1.0.15：会话自动过口令门并修复登录资料（到期/积分/观看/绑定状态）；积分商店内嵌原站网页；播放防黑屏与声音看门狗；推荐流限前5集；选集抽屉新增同IP tab；倍速播放弹幕恒为1倍速。",
+      "md5": "0cd5efe82e7a9fc38dd05969b9bce7a5",
+      "category": "env",
       "platforms": [
         "android"
-      ],
-      "md5": "e35549eeb966be1123c80ca1f9e219ce",
-      "changelog": "端口改为 8997（params 与 healthCheck 同步 8997）。"
+      ]
     },
     {
       "id": "t4server",
@@ -1068,24 +1072,23 @@
     {
       "id": "duojupan",
       "name": "多聚网盘",
-      "author": "duoju",
-      "desc": "多聚网盘服务：支持夸克网盘、UC 网盘、百度网盘的登录与分享播放。",
-      "version": "1.5.0",
+      "author": "JmwPower",
+      "desc": "多聚网盘后台：夸克/UC/百度网盘登录管理与分享播放，豆瓣分类与盘搜聚合 API，供盘搜规则调用。安卓端。",
+      "version": "1.6.1",
       "type": "import",
-      "category": "app",
-      "size": 18360367,
-      "url": "packages/xjpan.zip",
-      "icon": "icons/duojupan.png",
+      "size": 9531455,
+      "url": "packages/duojupan-1.6.1.zip",
+      "icon": "icons/duoju.png",
       "tags": [
-        "服务",
-        "应用"
+        "网络",
+        "服务"
       ],
+      "changelog": "v1.6.1：追剧栏精简为只显示「看到第几集」，移除追更刷新。",
+      "md5": "96a9ba8e7364ed3f110c8e0b70800dc5",
+      "category": "env",
       "platforms": [
         "android"
-      ],
-      "md5": "0a6ff0bc0effa5c36c649900489aff23",
-      "changelog": "导入型二进制（arm64，包内 xjpan-android），启动参数 -port 5690 -bind 127.0.0.1，healthCheck http://127.0.0.1:5690/。",
-      "updatedAt": "2026-10-17T09:35:02Z"
+      ]
     },
     {
       "id": "risk-rules",
@@ -1111,26 +1114,133 @@
     },
     {
       "id": "my-home",
-      "name": "我的主页 · 自定义界面包（14 套 UI 皮肤）",
-      "author": "yydfys",
-      "desc": "DsPlayer 自定义界面（WEB 源 local_web_ui）资源包：14 套独立 UI 皮肤 + 选择页 index.html + 适配层 _nb.js。整包按 DsPlayer 目录树解压，落 /storage/emulated/0/dsplayer/spider/html/ui/。皮肤页在 <head> 里先引 _nb.js，由它把皮肤原本依赖的 window.NativeBridge 接口桥接到本机网关 MCP（http://127.0.0.1:<gwPort>/mcp，工具 list_sites / site_home / site_category / site_search / site_detail），详情改用 window.fm.vod 打开，列表封面用 site_detail 有界并发补图（预算 4.5s，超时留空走占位图）。端口只认壳子注入的 ds.env.gwPort（9978 起顺延，换设备会变），token 五级取值（手填 localStorage → ds.env → 壳子原生请求读网关 / → 跨域 fetch → 容器帧 postMessage）并在自动发现失败时弹层手填一次；请求体中文走 asciiJson 转义、Accept 只声明 application/json 以避开网关 SSE 分支 500。选择结果存 localStorage（dsui_current），进入皮肤后右下角浮动「切换」按钮可回选择页换肤。注意：皮肤页含 Vue 3 / font-awesome 等 CDN 依赖，需联网；PC 端未验证，故 platforms 只声明 android。",
+      "name": "炫彩主页web源",
+      "author": "JmwPower",
+      "desc": "稻壳适配多风格炫彩主页,安装后web源选ui即可,ui来自LZ",
       "version": "1.0.3",
       "type": "source",
       "category": "app",
       "url": "packages/my-home-1.0.3.zip",
       "size": 213576,
       "md5": "963d92894a1d07606807ecc22b4f90fc",
-      "icon": "icons/my-home.png",
+      "changelog": "v1.0.3：多风格炫彩主页 web 源包。",
       "tags": [
-        "界面",
-        "皮肤",
-        "资源包"
+        "本地源",
+        "主页"
       ],
+      "icon": "icons/demo-sources.png",
+      "platforms": [
+        "android",
+        "win32"
+      ]
+    },
+    {
+      "id": "duoju-lite-green",
+      "name": "多聚短剧·绿色版",
+      "author": "JmwPower",
+      "desc": "多聚短剧精简版。",
+      "version": "1.4.60",
+      "type": "import",
+      "size": 6071313,
+      "url": "packages/duoju-lite-green.zip",
+      "icon": "icons/duoju.png",
+      "tags": [
+        "网络",
+        "服务"
+      ],
+      "changelog": "v1.4.60：修复自动切集几集后没声音；加起播看门狗防黑屏。",
+      "md5": "8bdfd5c0be9ddea68bb3a91a15b28ef8",
+      "category": "env",
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "djduanju",
+      "name": "多聚短剧配套源",
+      "author": "JmwPower",
+      "desc": "多聚短剧配套源。",
+      "version": "0.0.2",
+      "type": "source",
+      "category": "app",
+      "url": "packages/djduanju.zip",
+      "size": 5343,
+      "md5": "1644f9c8b104d263da1471d5a3733926",
+      "changelog": "绿色版。",
+      "tags": [
+        "本地源",
+        "应用"
       ],
-      "abis": [],
-      "changelog": "1.0.3 首版上架：14 套皮肤（东方留白 / 光影 / 单手操作 / 双列灵动流 / 封面流 / 放映长廊 / 旋转剧场 / 旋转剧场2 / 杂志画报风 / 沉浸 / 沉浸大卡流 / 流光墙 / 立体阴影 / 翰墨阁）+ index.html 选择页 + _nb.js 适配层（网关端口只认 ds.env.gwPort、token 五级取值 + 手填兜底、Accept 仅 application/json 避 SSE 500、中文请求体 ASCII 转义、封面并发有界补图、切换 UI 浮动条）。包根 source.json 仅 {\"target\":\"dsplayer\"}，无多余键。"
+      "icon": "icons/demo-sources.png",
+      "platforms": [
+        "android",
+        "win32"
+      ]
+    },
+    {
+      "id": "duoju-ting-source",
+      "name": "多聚听书配套源",
+      "author": "JmwPower",
+      "desc": "多聚听书 ds 规则",
+      "version": "1.9.1",
+      "type": "source",
+      "size": 3767,
+      "url": "packages/duoju-ting-source.zip",
+      "icon": "icons/duojuting.png",
+      "tags": [
+        "规则",
+        "听书"
+      ],
+      "changelog": "修复 searchUrl 为空导致的搜索无结果。",
+      "md5": "450b0d5f3b9c4f4b92726adab55adcbd",
+      "category": "app",
+      "platforms": [
+        "android",
+        "win32"
+      ]
+    },
+    {
+      "id": "duojupan-win",
+      "name": "多聚网盘 Windows版",
+      "author": "JmwPower",
+      "desc": "多聚网盘后台 Windows 端：夸克/UC/百度网盘登录管理与分享播放，豆瓣分类与盘搜聚合 API，供盘搜规则调用。",
+      "version": "1.6.1",
+      "type": "import",
+      "size": 10312294,
+      "url": "packages/duojupan-win-1.6.1.zip",
+      "icon": "icons/duoju.png",
+      "tags": [
+        "网络",
+        "服务"
+      ],
+      "changelog": "v1.6.1：追剧栏精简为只显示「看到第几集」，移除追更刷新。",
+      "md5": "625eae88b2d11634a81bb12061e3ff20",
+      "category": "env",
+      "platforms": [
+        "win32"
+      ]
+    },
+    {
+      "id": "douban-pansou",
+      "name": "豆瓣盘搜",
+      "author": "JmwPower",
+      "desc": "豆瓣影视聚合盘搜规则：豆瓣分类/搜索聚合夸克/UC/百度网盘资源，封面与详细资料推送到原生播放页。需先安装「多聚网盘」。",
+      "version": "1.1.1",
+      "type": "source",
+      "category": "app",
+      "url": "packages/douban-pansou-1.1.1.zip",
+      "size": 13817,
+      "md5": "a94bf035597bf13c2bd3787884cabbf6",
+      "changelog": "v1.1.1：追剧栏只显示看到第几集。",
+      "tags": [
+        "本地源",
+        "规则"
+      ],
+      "icon": "icons/duoju.png",
+      "platforms": [
+        "android",
+        "win32"
+      ]
     }
   ]
 }
