@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-18T07:12:31Z",
+  "updatedAt": "2026-10-18T12:20:22Z",
   "plugins": [
     {
       "id": "musick-api",
@@ -1108,6 +1108,29 @@
         "android"
       ],
       "category": "env"
+    },
+    {
+      "id": "my-home",
+      "name": "我的主页 · 自定义界面包（14 套 UI 皮肤）",
+      "author": "yydfys",
+      "desc": "DsPlayer 自定义界面（WEB 源 local_web_ui）资源包：14 套独立 UI 皮肤 + 选择页 index.html + 适配层 _nb.js。整包按 DsPlayer 目录树解压，落 /storage/emulated/0/dsplayer/spider/html/ui/。皮肤页在 <head> 里先引 _nb.js，由它把皮肤原本依赖的 window.NativeBridge 接口桥接到本机网关 MCP（http://127.0.0.1:<gwPort>/mcp，工具 list_sites / site_home / site_category / site_search / site_detail），详情改用 window.fm.vod 打开，列表封面用 site_detail 有界并发补图（预算 4.5s，超时留空走占位图）。端口只认壳子注入的 ds.env.gwPort（9978 起顺延，换设备会变），token 五级取值（手填 localStorage → ds.env → 壳子原生请求读网关 / → 跨域 fetch → 容器帧 postMessage）并在自动发现失败时弹层手填一次；请求体中文走 asciiJson 转义、Accept 只声明 application/json 以避开网关 SSE 分支 500。选择结果存 localStorage（dsui_current），进入皮肤后右下角浮动「切换」按钮可回选择页换肤。注意：皮肤页含 Vue 3 / font-awesome 等 CDN 依赖，需联网；PC 端未验证，故 platforms 只声明 android。",
+      "version": "1.0.3",
+      "type": "source",
+      "category": "app",
+      "url": "packages/my-home-1.0.3.zip",
+      "size": 213576,
+      "md5": "963d92894a1d07606807ecc22b4f90fc",
+      "icon": "icons/my-home.png",
+      "tags": [
+        "界面",
+        "皮肤",
+        "资源包"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "abis": [],
+      "changelog": "1.0.3 首版上架：14 套皮肤（东方留白 / 光影 / 单手操作 / 双列灵动流 / 封面流 / 放映长廊 / 旋转剧场 / 旋转剧场2 / 杂志画报风 / 沉浸 / 沉浸大卡流 / 流光墙 / 立体阴影 / 翰墨阁）+ index.html 选择页 + _nb.js 适配层（网关端口只认 ds.env.gwPort、token 五级取值 + 手填兜底、Accept 仅 application/json 避 SSE 500、中文请求体 ASCII 转义、封面并发有界补图、切换 UI 浮动条）。包根 source.json 仅 {\"target\":\"dsplayer\"}，无多余键。"
     }
   ]
 }
