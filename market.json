@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-18T20:49:11+08:00",
+  "updatedAt": "2026-10-18T21:06:00+08:00",
   "plugins": [
     {
       "id": "musick-api",
@@ -1117,13 +1117,13 @@
       "name": "炫彩主页web源",
       "author": "JmwPower",
       "desc": "稻壳适配多风格炫彩主页,安装后web源选ui即可,ui来自LZ",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "type": "source",
       "category": "app",
-      "url": "packages/my-home-1.0.3.zip",
-      "size": 213576,
-      "md5": "963d92894a1d07606807ecc22b4f90fc",
-      "changelog": "v1.0.3：多风格炫彩主页 web 源包。",
+      "url": "packages/my-home-1.0.4.zip",
+      "size": 243265,
+      "md5": "9888cb7483f39430ceab7d0528d8dd75",
+      "changelog": "v1.0.4：更新分类筛选。",
       "tags": [
         "本地源",
         "主页"
