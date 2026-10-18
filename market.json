@@ -2,7 +2,7 @@
   "name": "DsPlayer 综合插件市场",
   "desc": "dsplayer 插件市场（上游两条线合并镜像 · 只增不删 · 上游删包也能装）",
   "logo": "icons/market.png",
-  "updatedAt": "2026-10-18T20:22:28+08:00",
+  "updatedAt": "2026-10-18T20:49:11+08:00",
   "plugins": [
     {
       "id": "musick-api",
@@ -991,17 +991,17 @@
       "name": "蓝莓短剧",
       "author": "JmwPower",
       "desc": "蓝莓短剧站点适配插件,需口令",
-      "version": "1.0.15",
+      "version": "1.0.16",
       "type": "import",
-      "size": 3382568,
-      "url": "packages/lanmei-lite-1.0.15.zip",
+      "size": 3383435,
+      "url": "packages/lanmei-lite-1.0.16.zip",
       "icon": "icons/lanmei.png",
       "tags": [
         "网络",
         "服务"
       ],
-      "changelog": "v1.0.15：会话自动过口令门并修复登录资料（到期/积分/观看/绑定状态）；积分商店内嵌原站网页；播放防黑屏与声音看门狗；推荐流限前5集；选集抽屉新增同IP tab；倍速播放弹幕恒为1倍速。",
-      "md5": "0cd5efe82e7a9fc38dd05969b9bce7a5",
+      "changelog": "v1.0.16：VIP 集解析走登录会话，会员账号可播 10 集之后的 VIP 集。",
+      "md5": "2be8815225057adcd80bf2d982bfdf04",
       "category": "env",
       "platforms": [
         "android"
